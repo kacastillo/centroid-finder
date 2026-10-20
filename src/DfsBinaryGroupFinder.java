@@ -125,5 +125,19 @@ public class DfsBinaryGroupFinder implements BinaryGroupFinder {
             }
         }
         if (image.length == 0 || image[0].length == 0) {
-       
+            throw new IllegalArgumentException("image must not be empty");
         }
+        int width = image[0].length;
+        for (int[] row : image) {
+            if (row.length != width) {
+                throw new IllegalArgumentException("image must be rectangular");
+            }
+            for (int pixel : row) {
+                if (pixel != 0 && pixel != 1) {
+                    throw new IllegalArgumentException("image must contain only 0s and 1s");
+                }
+            }
+        }
+    }
+}
+        
