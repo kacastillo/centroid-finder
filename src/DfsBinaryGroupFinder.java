@@ -32,10 +32,23 @@ public class DfsBinaryGroupFinder implements BinaryGroupFinder {
     */
     @Override
     public List<Group> findConnectedGroups(int[][] image) {
-        List<Integer> pixelGroup = new ArrayList<>();
+        validate(image);
 
-        
-        return Collections.reverse(pixelGroup);
-    }
+        int rows = image.length;
+        int cols = image[0].length;
+        boolean[][] visited = new boolean[rows][cols];
+
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                if(image[row][col] == 1 && !visited[row][col]) {
+                    groups.add(pixelGroup(image, visited, row, col));
+
+                }
+            }
+        }
+        groups.sort(Collections.reverseOrder());
+        return groups;
+        // List<Integer> pixelGroup = new ArrayList<>();
+        // return Collections.reverse(pixelGroup);
     
 }
