@@ -25,3 +25,11 @@ Implementation of ImageGroupFinder that first binarizes given image and then fin
 
  ## DistanceImageBinarizer
  An implementation of the ImageBinarizer interface that uses color distance to determine whether each pixel should be black or white in the binary image. Constructs a DistanceImageBinarizer using the given ColorDistanceFinder,  target color, and threshold.
+
+
+## Group
+- Where we will find that blobs of white where we will find their center and x,y and also the size of it.
+- We gonna compare their size and return something with (size, x,y)
+
+## EuclideanColorDistance
+- Where we will return euclidean color distance between two hex RGB colors which basically tell us how different two colors are.
