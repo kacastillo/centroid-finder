@@ -9,3 +9,19 @@ Groups colors into 0s or 1s, which convert to either black or white. Which then 
 
 ## BinarizingImageGroupFinder
 Implementation of ImageGroupFinder that first binarizes given image and then finds groups of white pixels.
+
+## BinaryGroupFinder
+ returns a list of sorted groups. The group's size is the number of pixels in the group. The centroid of the group is computed as the average of each of the pixel locations across each dimension.
+
+ ## ColorDistanceFinder
+ Defines an interface for computing the distance between two colors, with 24-bit, using red, green, and blue
+
+ ## Coordinate
+ Shows location of image or array, usually with x,y (row, column)
+
+ ## DfsBinaryGroupFinder
+  The method returns a list of sorted groups. The group's size is the number of pixels in the group. The centroid of the group
+ is computed as the average of each of the pixel locations across each dimension.
+
+ ## DistanceImageBinarizer
+ An implementation of the ImageBinarizer interface that uses color distance to determine whether each pixel should be black or white in the binary image. Constructs a DistanceImageBinarizer using the given ColorDistanceFinder,  target color, and threshold.
