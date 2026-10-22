@@ -19,7 +19,7 @@ public class EuclideanColorDistanceTest {
     // Red to black expected
     @Test 
     public void testRedToBlack(){
-        assertEquals(255,finder.distance(0xFF0000, 0x00000));
+        assertEquals(255.0,finder.distance(0xFF0000, 0x00000));
     }
 
 }
