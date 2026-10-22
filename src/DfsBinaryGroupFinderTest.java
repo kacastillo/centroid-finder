@@ -25,7 +25,7 @@ import org.junit.jupiter.api.Test;
     }
 
 
-    // w zeros
+    // w zeros 
      @Test
     public void testSingleZero() {
         assertTrue(finder.findConnectedGroups(new int[][] {{0}}).isEmpty());
