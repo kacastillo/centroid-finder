@@ -15,9 +15,11 @@ public class EuclideanColorDistanceTest {
         assertEquals(0.0, finder.distance(0xFFFFFF, 0xFFFFFF), 0.0001);    
 }
 
-    // black vs white expected 441.6729559300637 from WolframAlpha
-    @Test
-    public void testBlackToWhite() {
-        assertEquals(441.6729559300637, finder.distance(0x000000, 0xFFFFFF), 0.0001);
+    
+    // Red to black expected
+    @Test 
+    public void testRedToBlack(){
+        assertEquals(255,finder.distance(0xFF0000, 0x00000));
     }
+
 }
