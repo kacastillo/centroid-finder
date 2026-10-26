@@ -43,7 +43,8 @@ public class DistanceImageBinarizer implements ImageBinarizer {
      * @param image the input RGB BufferedImage
      * @return a 2D binary array where 1 represents white and 0 represents black
      */
-     // TODO (KC) convert colored image into a 2d array containing 0s and 1s
+
+    
     // get image width and height using getWidth() and getHeight()
     // create 2d int array using new int[height][width] then loop using nested group
     //call distance() from ColorDistanceFinder.java
