@@ -34,22 +34,6 @@ public class DfsBinaryGroupFinder implements BinaryGroupFinder {
     */
     @Override
     public List<Group> findConnectedGroups(int[][] image) {
-        // validate(image);
-
-        // int rows = image.length;
-        // int cols = image[0].length;
-        // boolean[][] visited = new boolean[rows][cols];
-
-        // for (int row = 0; row < rows; row++) {
-        //     for (int col = 0; col < cols; col++) {
-        //         if(image[row][col] == 1 && !visited[row][col]) {
-        //             groups.add(pixelGroup(image, visited, row, col));
-
-        //         }
-        //     }
-        // }
-        // groups.sort(Collections.reverseOrder());
-        // return groups;
 
           validate(image);
  
@@ -68,8 +52,6 @@ public class DfsBinaryGroupFinder implements BinaryGroupFinder {
  
         groups.sort(Collections.reverseOrder());
         return groups;
-        // List<Integer> pixelGroup = new ArrayList<>();
-        // return Collections.reverse(pixelGroup);
     }
 
         private Group pixelGroup(int[][] image, boolean[][] visited, int startRow, int startCol) {
@@ -93,10 +75,7 @@ public class DfsBinaryGroupFinder implements BinaryGroupFinder {
             size++;
             sumX += col; // x is the column
             sumY += row; // y is the row
-
-
-            // for int i = 0; i < down row length, i ++ 
-            // int nextrow = row + down row, int next col = col + down col
+            
              for (int i = 0; i < dRow.length; i++) {
                 int nextRow = row + dRow[i];
                 int nextCol = col + dCol[i];

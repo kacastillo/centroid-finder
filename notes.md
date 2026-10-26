@@ -67,3 +67,5 @@ This changes the pixel at (10, 20) to red.
 - Stub: a pretend helper that just give back a fixed answer. For example: "Meo Meo is a fat cat." so the helper will never print out "Meo Meo is skinny" or "Meo Meo is a fat dog". She is a cat and always a fat cat
 - Fake: a pretend helper that actually work but in a simpler way than a real one. For example: If the two color are equal, return 0 else 100.
 - Mock (spy): a pretend helper that keep notes on how it was used, so the test can ask it afterward like:"how many times were you call?"
+
+## Branch Video
