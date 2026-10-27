@@ -69,3 +69,6 @@ This changes the pixel at (10, 20) to red.
 - Mock (spy): a pretend helper that keep notes on how it was used, so the test can ask it afterward like:"how many times were you call?"
 
 ## Branch Video
+mkdir -p src/main/java src/test/java
+git mv src/*Test.java src/test/java/
+git mv src/*.java src/main/java/
