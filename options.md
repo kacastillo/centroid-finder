@@ -31,3 +31,6 @@ this is the Maven for JCodec:
     <artifactId>jcodec</artifactId>
     <version>0.2.5</version>
 </dependency>
+
+## small mp4 video link - 1.5MB
+https://file-examples.com/index.php/sample-video-files/sample-mp4-files/#google_vignette

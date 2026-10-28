@@ -8,39 +8,39 @@
   <version>1.0-SNAPSHOT</version>
 
   <properties>
-    <maven.compiler.source>21</maven.compiler.source>
-    <maven.compiler.target>21</maven.compiler.target>
+    <maven.compiler.release>21</maven.compiler.release>
+    <exec.mainClass>ImageSummaryApp</exec.mainClass>
   </properties>
 
   <dependencies>
-  <!-- Source: https://mvnrepository.com/artifact/com.orsonpdf/orsonpdf -->
-  <dependency>
-    <groupId>com.orsonpdf</groupId>
-    <artifactId>orsonpdf</artifactId>
-    <version>1.9.1</version>
-    <scope>compile</scope>
-  </dependency>
-  <!-- JFreeChart for plotting -->
+    <!-- Source: https://mvnrepository.com/artifact/com.orsonpdf/orsonpdf -->
+    <dependency>
+      <groupId>com.orsonpdf</groupId>
+      <artifactId>orsonpdf</artifactId>
+      <version>1.9.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <!-- JFreeChart for plotting -->
     <dependency>
       <groupId>org.jfree</groupId>
       <artifactId>jfreechart</artifactId>
       <version>1.5.3</version>
     </dependency>
 
- <!-- JavaCV  -->
- <dependency>
-    <groupId>org.bytedeco</groupId>
-    <artifactId>javacv-platform</artifactId>
-    <version>1.5.14</version>
-  </dependency>
+    <!-- JavaCV -->
+    <dependency>
+      <groupId>org.bytedeco</groupId>
+      <artifactId>javacv-platform</artifactId>
+      <version>1.5.14</version>
+    </dependency>
 
-   <!-- JCodec  -->
-   <dependency>
-    <groupId>org.jcodec</groupId>
-    <artifactId>jcodec</artifactId>
-    <version>0.2.5</version>
-</dependency>
-    
+    <!-- JCodec (not used yet)
+    <dependency>
+      <groupId>org.jcodec</groupId>
+      <artifactId>jcodec</artifactId>
+      <version>0.2.5</version>
+    </dependency> -->
+
     <!-- JUnit Jupiter -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -58,13 +58,13 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.5.3</version>
       </plugin>
-      <!-- Exec -->
+      <!-- Exec: main class comes from the exec.mainClass property above -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.1.0</version>
         <configuration>
-          <mainClass>ImageSummaryApp</mainClass>
+          <mainClass>${exec.mainClass}</mainClass>
         </configuration>
       </plugin>
     </plugins>
