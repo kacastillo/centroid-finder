@@ -16,3 +16,18 @@
 --
 
 - I think we should use javaCV and depend on what video we look at we could use JCodec
+
+this is the Maven for the javaCV: 
+  <dependency>
+    <groupId>org.bytedeco</groupId>
+    <artifactId>javacv-platform</artifactId>
+    <version>1.5.14</version>
+  </dependency>
+^^ went with JAvaCV
+
+this is the Maven for JCodec:
+<dependency>
+    <groupId>org.jcodec</groupId>
+    <artifactId>jcodec</artifactId>
+    <version>0.2.5</version>
+</dependency>
